@@ -1,0 +1,217 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import Hero from '../components/Hero.astro'
+import Feature from '../components/Feature.astro'
+import Counter from '../components/Counter.astro'
+import ContentMedia from '../components/ContentMedia.astro'
+---
+
+<DefaultLayout title="Home">
+  <Hero />
+
+<div class="container">
+  <section id="about" class="container-xxl">
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+       <div class="mr-md-3 text-center overflow-hidden pl-4 pr-4">
+          <div class="py-3">
+             <h3 class="display-5 section-title">About the Hackathon</h3>
+          </div>
+          <div class="mx-auto bd-highlight text-justify px-3">
+
+             <p class="text-justify">This hackathon is a platform for the CFD-OpenFOAM community to show their skills in OpenFOAM. Participants are expected to upgrade solved Case Studies into the latest versions of OpenFOAM according to the standards of <a href="https://openfoam.org/" target="_blank">openfoam.org</a> or <a href="https://www.openfoam.com/" target="_blank">openfoam.com</a>. </p>
+<p class="text-justify">The list of solved Case Studies will be released along with the Problem Statement Announcement. Please refer to the Dates Section at the top, for more details about important dates.</p>
+<p class="text-justify">The OpenFOAM Hackathon is organised by the <a href="https://fossee.in/" target="_blank">FOSSEE</a> project, IIT Bombay. FOSSEE (Free and Open Source Software for Education) trains and promotes the use of Free/ Libre Open Source Software. This project is a part of the National Mission on Education through ICT (NMEICT) funded by the Ministry of Education, Govt. of India.</p>
+          </div>
+       </div>
+    </div>
+ </section>
+
+<!--- <section id="aboutthehackathon">
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+       <div class="mr-md-3 text-center overflow-hidden pl-4 pr-4">
+          <div class="py-3">
+             <h3 class="display-5 section-title">About the Hackathon</h3>
+          </div>
+          <div class="mx-auto bd-highlight px-3">
+              <p class="text-justify"><span>In this Hackathon participants will be judged on their skills on speed and accuracy to upgrade a solved Case Study (Examples of solved problems on CFD using OpenFOAM) to the recent version of OpenFOAM v11 (according to <a href="https://openfoam.org/release/11/" target="_blank">openfoam.org</a>) and OpenFOAM v2306 (according to <a href="https://www.openfoam.com/news/main-news/openfoam-v2306" target="_blank">openfoam.com</a>). Each Case Study will carry specific (i) Points according to the level of difficulty to solve and (ii) Number of days the participants will get to solve the problem. In case, a participant cannot provide a solution to the Case Study that was selected by him/ her, the problem will be released back to the repository of available problems. The Hackathon will be open for 15 days. Participants can choose problems of different complexity based on the (i) Points (ii) Days to solve the problem.</span>
+             </p>
+          </div>
+       </div>
+    </div>
+ </section>--->
+<!-------------PARTICIPATION STEPS/ GIDELINES--------------------->
+
+<!---<section id="participation">
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+       <div class="mr-md-3 text-center overflow-hidden pl-4 pr-4">
+          <div class="py-3">
+             <h3 class="display-5 section-title">Participation Steps/ Guidelines</h3>
+          </div>
+          <div class="mx-auto bd-highlight text-justify px-3">
+
+             <p class="text-justify">
+<ol>
+<li><strong>Step 1:</strong><span> There will be a pool of Case Studies (Examples of solved problems on CFD using OpenFOAM). Choose a single/ multiple Case Study(ies) from a pool of solved examples in OpenFOAM</span></li>
+<li><strong>Step 2:</strong><span> Upgrade the selected Case Study to the recent version of OpenFOAM. The recent version of OpenFOAM can be according to openfoam.org (v11) or openfoam.com (v2306)</span></li>
+<li><strong>Step 3:</strong><span> If you can upgrade the Case Study within the stipulated time, please submit the Case Study. Submission guidelines will be announced along with problem statement announcement. If you are not able to complete the activity within the stipulated time period, the Case Study will be automatically released in the problem pool for others to take up. You may select another Case Study later, and submit within the deadline.</span></li>
+</ol>
+<p><strong>Note: </strong><mark>Participants will get a total 15 days period to solve a single/ multiple problems selected.</mark></p>
+<p><strong>Tips: </strong>Participants can select multiple simple problems which will require a lesser amount of time OR select a complex problem which will require more time. Participants can use self judgment to choose problems for the Hackathon.The winner will be judged based on the candidate who has scored the maximum number of points. In case of a tie, the selection panel will look into their submissions and make a decision</p>
+          </div>
+       </div>
+    </div>
+ </section>-->
+<!-------------RESOURCES-------------->
+ <section id="resources" style="background-color: #005a9c;background-image: url('https://hackathon.fossee.in/cfd/static/cms/uploads/images/webtop-bg-blank.png');background-size: cover;background-attachment: fixed;">
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+       <div class="mr-md-3 pt-3 text-center overflow-hidden">
+          <div class="py-3">
+             <h3 class="display-5 section-title" style="color:white;">Resources</h3>
+          </div>
+<p style="color:white;">Interested candidates who want to participate in the Hackathon with limited knowledge of OpenFOAM can augment their skills by using the following resources:</p>
+          <div class="container">
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card shadow">
+             <i class="bi bi-book-fill"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Spoken Tutorials to learn OpenFOAM:</h5>
+                    <p class="card-text"><a title="https://cfd.fossee.in/resources" href="https://cfd.fossee.in/resources" target="_blank">CFD
+                      Resources</a></p>
+                      <p class="card-text">&nbsp;</p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow">
+              <div class="card-body">
+                  <h5 class="card-title">OpenFOAM v2212 (.com version):</h5>
+                  <p class="card-text"><a href="https://doc.openfoam.com/2212/" target="_blank">OpenFOAM Tutorial Guide</a></p>
+                   <p class="card-text">&nbsp;</p>
+              </div>
+          </div>
+      </div> <div class="col-md-4 mb-4">
+       <div class="card shadow">
+          
+           <div class="card-body">
+               <h5 class="card-title">OpenFOAM v10 (.org version):</h5>
+               <p class="card-text"><a href="https://doc.cfd.direct/openfoam/user-guide-v10/contents" target="_blank">OpenFOAM User Guide</a></p>
+                   <p class="card-text">&nbsp;</p>
+<!--                  <p class="card-text"><a title="https://cfd.direct/openfoam/v11-productive-cfd"
+                   href="https://cfd.direct/openfoam/v11-productive-cfd" target="_blank">Productive CFD v11</a></p> -->
+              
+           </div>
+       </div>
+   </div> 
+      
+    </div>
+</div>
+       </div>
+    </div>
+ </section>
+
+<!------------REGISTER------------->
+ <section id="register">
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+       <div class="mr-md-3 text-center overflow-hidden pl-4 pr-4">
+          <div class="py-3">
+             <h3 class="display-5 section-title">Registration</h3>
+          </div>
+          <div class="mx-auto bd-highlight text-center px-3">
+Please click on the following button to register yourself for the Hackathon
+             <p> <a
+                   href="https://docs.google.com/forms/d/e/1FAIpQLSc5INelxs9--J_z25zGRgr3PfEn68ePuJE5mZD2oCB9DZ4pMw/viewform?usp=pp_url"
+                   target="_blank"><button type="button" class="btn btn-outline-primary">Click here</button></a></p>
+             <figure><img src="https://hackathon.fossee.in/cfd/static/cms/uploads/images/QR-code-gform.png"
+                   class="img-fluid" alt="QRcode" style="height:50%; width: 150px;">
+                <p style="margin-top: 10px">
+                   Scan this QR Code to register
+                </p>
+             </figure>
+<p><strong>Please Note:</strong><mark> Participation in teams is not allowed. Please register as single participants.</mark></p>
+          </div>
+       </div>
+    </div>
+ </section>
+
+
+ <!-----------CONTACT US---------->
+ <section id="contact-us">
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+       <div class="mr-md-3 text-center overflow-hidden pl-4 pr-4">
+          <div class="py-3">
+             <h3 class="display-5 section-title">Contact Us <i class="far fa-envelope"></i></h3>
+             <p>Please write to us in case of any queries regarding the Hackathon at:</p>
+          </div>
+          <div class="mx-auto" style="border-radius: 21px 21px 21px 21px; font-size: 14pt">
+             Email :<a href="mailto:contact-cfd@fossee.in">contact-cfd[at]fossee[dot]in</a>
+          </div>
+<p>Please connect to us and interact with the FOSSEE team members through the following <a href="https://join.slack.com/t/fosseeopenfoam/shared_invite/zt-26wvdcemr-KhXIGM2fnh7LL0xGLGohMw" target="_blank">Slack channel</a></p>
+       </div>
+    </div>
+ </section>
+  <!-- <section class="my-64">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">Features</h2>
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        <Feature icon="mdi:tailwind" title="Tailwind CSS">
+          Use the power of Tailwind to greatly improve your productivity and enhance your developer workflow.
+        </Feature>
+        <Feature icon="mdi:wheelchair-accessibility" title="a11y Components">
+          17 components and counting, all tried and tested for the most optimal accessible experience for your visitors.
+        </Feature>
+        <Feature icon="mdi:looks" title="Prettier">
+          Less worry about formatting your code, let the Astro Prettier integration do the heavy lifting.
+        </Feature>
+        <Feature icon="mdi:eslint" title="ESLint">
+          Lint your code with strict a11y settings to ensure you stay on track with the WCAG standards.
+        </Feature>
+        <Feature icon="mdi:book-open-page-variant" title="Blog">
+          This theme comes with a fully integrated blog, dynamic pages and SEO optimization.
+        </Feature>
+        <Feature icon="mdi:language-markdown" title="Markdown & MDX">
+          Easily use .md and .mdx pages to build your websites or use it with Netlify CMS.
+        </Feature>
+        <Feature icon="mdi:theme-light-dark" title="Dark mode">
+          Fully integrated Dark mode gives your users the choice for their favorite viewing mode.
+        </Feature>
+        <Feature icon="mdi:cog" title="Design System">
+          The theme offers some very handy utilities to help you build your website faster.
+        </Feature>
+        <Feature icon="mdi:lighthouse" title="Lighthouse Scores">
+          Excellent lighthouse scores means your website will load faster and get better SEO rankings.
+        </Feature>
+      </div>
+    </div>
+  </section>
+  <ContentMedia imgSrc="/accessible-components.webp">
+    <h2>Accessible Components</h2>
+    <p class="text-2xl">
+      This theme provides plenty of tried and tested Accessible Astro Components. Some are native to this theme and a
+      lot of others are integrated using a <a href="https://github.com/markteekman/accessible-astro-components"
+        >separate package</a
+      >. They'll get you up and running in building an accessible solution for your visitors.
+    </p>
+  </ContentMedia>
+  <ContentMedia imgSrc="/wcag-compliant.webp" reverseImg={true}>
+    <h2>WCAG 2.1 AA Compliant</h2>
+    <p class="text-2xl">
+      Using semantic HTML, landmarks, skip links, screen reader friendly content, aria-labels, keyboard accessible
+      navigation and components, clear outlines and tab indicators and the right color contrast, you're more certain of
+      reaching WCAG AA compliance.
+    </p>
+  </ContentMedia>
+  <section class="mb-32 mt-64">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">Counters</h2>
+      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4">
+        <Counter count="520" title="Stars" sub="On GitHub" />
+        <Counter count="17" title="Accessible" sub="Components" />
+        <Counter count="500" title="Commits" sub="Merged" />
+        <Counter count="18+" title="Months" sub="Since launch" />
+      </div>
+    </div>
+  </section> -->
+  </div>
+</DefaultLayout>
