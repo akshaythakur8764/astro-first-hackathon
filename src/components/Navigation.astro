@@ -220,27 +220,6 @@ import { Image } from 'astro:assets'
 
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  const menu = document.getElementById('main-navigation');
-  const menuItems = menu.querySelectorAll('a');
-
-  menuItems.forEach((menuItem) => {
-    menuItem.addEventListener('click', (event) => {
-      event.preventDefault();
-
-      const targetId = menuItem.getAttribute('href').substring(1);
-      const targetElement = document.getElementById(targetId);
-
-      if (targetElement) {
-        // Smooth scroll to the target element
-        targetElement.scrollIntoView({ behavior: 'smooth' });
-
-        // Optionally, you can update the URL to include the fragment identifier
-        // window.history.pushState({}, '', `#${targetId}`);
-      }
-    });
-  });
-});
 
 
 
