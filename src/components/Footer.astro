@@ -4,9 +4,10 @@ import CallToAction from './CallToAction.astro'
 const currentYear = new Date().getFullYear()
 ---
 
-<footer>
+<!-- <footer>
   <CallToAction />
   <section class="py-8">
+    <section class=" absolute inset-x-0 bottom-0 h-16 bg-white border-gray-200 dark:bg-gray-900">
     <div class="container">
       <p>
         &copy; {currentYear} - Starter Theme for <a href="https://astro.build/">Astro</a>. Made with ❤️ by <a
@@ -15,4 +16,53 @@ const currentYear = new Date().getFullYear()
       </p>
     </div>
   </section>
-</footer>
+</footer> -->
+
+<footer>
+   
+  <!-- <CallToAction /> -->
+  <!-- <section class="py-8"> -->
+    <section class="container">
+    
+<!-- <section id="footer" class="site-footer">
+  <footer class="container mx-auto sm:px-4 max-w-full mx-auto sm:px-4 py-5 site-footer pl-5 pr-4"> -->
+     <div class="flex rounded pt-4 flex-wrap" style="background-color:var(--secondary-500);">
+        <div class="sm:w-1/2 pl-3">
+           <ul class="list-unstyled text-small">
+              <li><a class="text-gray-700" href="https://fossee.in" target="_blank">FOSSEE</a></li>
+              <li><a class="text-gray-700" href="https://cfd.fossee.in/" target="_blank">CFD</a></li>
+              <!--<li><a class="text-gray-700" href="https://spoken-tutorial.org" target="_blank">Spoken Tutorial</a></li>-->
+           </ul>
+        </div>
+        <!--<div class="sm:w-1/4 pr-4 pl-4">
+           <h5>Resources</h5>
+           <ul class="list-unstyled text-small">
+              <li><a class="text-gray-700" href="https://www.synfig.org/" target="_blank">Synfig.org</a></li>
+              <li><a class="text-gray-700" href="https://spoken-tutorial.org" target="_blank">Spoken Tutorial</a></li>
+              <li><a class="text-gray-700" href="https://forums.fossee.in/" target="_blank">Fossee Forum</a></li>
+              <li><a class="text-gray-700" href="https://forums.spoken-tutorial.org" target="_blank">Spoken Tutorial Forum</a></li>
+           </ul>
+        </div>-->
+       <!--  <div class="sm:w-1/4 pr-4 pl-4">
+           <h5>Socail Media</h5>
+           <ul class="list-unstyled text-small">
+              <li><a href="https://www.facebook.com/FOSSEENMEICT/" class="facebook text-white" target="_blank"><i
+                 class="fab fa-facebook"></i></a>
+              </li><br>
+              <li><a href="https://twitter.com/FOSSEENMEICT/" class="twitter" target="_blank"><i
+                 class="fab fa-twitter"></i></a>
+              </li>
+           </ul>
+        </div>-->
+        <br>
+        <div class="sm:w-1/2 pr-4 pl-4"> 
+           <small class="block mb-4 text-gray-700">
+              <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://hackathon.fossee.org/3D-anim/static/cms/uploads/images/88x31.png"></a><br>
+              This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
+                 Attribution-ShareAlike 4.0 International License</a>.
+           </small>
+        </div>
+        </div>
+      </section>  
+  </footer>
+

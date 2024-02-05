@@ -5,25 +5,23 @@ import { Icon } from 'astro-icon/components'
 const { src = 'https://hackathon.fossee.in/cfd/static/cms/uploads/images/left-img.png' } = Astro.props
 ---
 <!-------------#front section------------- -->
-<section class="hero my-24">
+<section class="hero my-8">
   <div class="container">
     <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
       <div class="flex flex-col items-center gap-8 md:items-start">
-        <h1 class="text-center text-6xl md:text-left lg:text-8xl">
+        <h4 class="text-center text-4xl md:text-left lg:text-4xl">
           <slot><span class="text-gradient">CFD Hackathon</span> Get ready to show your skills</slot>
-        </h1>
+        </h4>
         <div class="flex flex-col gap-3 min-[500px]:flex-row">
-          <a class="button has-icon" href="https://github.com/markteekman/accessible-astro-starter">
-            <Icon name="ion:star-outline" />
-            Star on GitHub
-          </a>
-          <a
-            class="button has-icon color-secondary"
-            href="https://github.com/markteekman/accessible-astro-starter/blob/main/README.md"
-          >
-            <Icon name="ion:bookmark-outline" />
-            Read the Docs
-          </a>
+          <div class="m-3 dates p-3">
+            <p class="important-dates"><strong>Registration opens: </strong>November 15, 2023</p>
+            <p class="important-dates"><strong>Registration closes: </strong>February 28, 2024</p>
+           <p class="important-dates"><strong>Hackathon start date : </strong>March 01, 2024 (tentative)</p>
+            <!--<p class="important-dates"><strong>Problem Statement Announcement + Submission Opens: </strong>12th Nov</p>
+            <p class="important-dates"><strong>Submission Closes:</strong> 28th Nov</p>
+            <p class="important-dates"><strong>Result Declaration:</strong> 14th Dec</p>-->
+           <a href="home#register"><button class="custom-btn btn-register" "="">Register</button> </a>
+</div>
         </div>
       </div>
       <img class="lg:block" src={src} alt="" decoding="async" />

@@ -1,5 +1,6 @@
 ---
 import '@astrojs/tailwind/base.css'
+import 'bootstrap/dist/css/bootstrap.css'
 import '../assets/scss/globals.scss'
 import SiteMeta from '../components/SiteMeta.astro'
 import Header from '../components/Header.astro'
@@ -68,12 +69,15 @@ const {
         --primary-background: var(--primary-500);
         --neutral-background: var(--neutral-900);
       }
-
+html{
+  scroll-behavior: smooth;
+}
       // sticky footer on low content pages
       html,
       body {
         height: 100%;
         overflow-x: hidden;
+        scroll-behavior: smooth;
       }
 
       body {
@@ -106,6 +110,11 @@ const {
             stroke: white;
           }
         }
+      }
+
+      .section-title{
+        color: red;
+        font-weight: 900;
       }
     </style>
   </body>

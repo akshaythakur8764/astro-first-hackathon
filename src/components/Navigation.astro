@@ -4,12 +4,12 @@ import { DarkMode } from 'accessible-astro-components'
 import { Image } from 'astro:assets'
 
 ---
-
+<!-- https://cfd.fossee.in/sites/default/files/logo_for_web_3.png -->
 <div id="main-navigation" class="is-desktop py-8">
   <div class="container">
     <a href="/" class="flex items-center gap-2 !no-underline">
-      <Image src="https://cfd.fossee.in/sites/default/files/logo_for_web_3.png" alt="Your Logo" width="100" height="100" />
-      <span class="font-bold">msnmsdnfm</span>
+      <!-- <Image src="https://cfd.fossee.in/sites/default/files/logo_for_web_3.png" alt="Your Logo" width="100" height="100" /> -->
+      <span class="font-bold"></span>
     </a>
     <div class="wrapper">
       <nav class="desktop-menu" aria-label="Main navigation desktop">
@@ -29,7 +29,7 @@ import { Image } from 'astro:assets'
 </div>
 
 <script>
-  document.addEventListener('astro:page-load', () => {
+   document.addEventListener('astro:page-load', () => {
     // variables
     const mainNav = document.querySelector('#main-navigation')
     const mainMenu = mainNav.querySelector('ul')
@@ -38,13 +38,14 @@ import { Image } from 'astro:assets'
     // functions
     const setActiveMenuItem = () => {
       const mobileDesktopMenus = mainNav.querySelectorAll('nav > ul')
-      const currenPathname = window.location.pathname
+      const currenPathname = window.location.pathname + window.location.hash
 
       mobileDesktopMenus.forEach((menu) => {
         const menuItems = [...menu.querySelectorAll('a:not([rel*="external"])')] as HTMLAnchorElement[]
 
         menuItems.forEach((menuItem) => {
-          if (currenPathname.includes(menuItem.pathname.replaceAll('/','')) && menuItem.textContent !== 'Home') {
+          /*if (currenPathname.includes(menuItem.pathname.replaceAll('/', '')) && menuItem.textContent !== 'Home' && menuItem.hash.length === 0)  {*/
+          if (currenPathname.includes((menuItem.pathname + menuItem.hash).replaceAll('/', '')) && menuItem.textContent !== 'Home' ) {
             menuItem.classList.add('is-active')
             menuItem.setAttribute('aria-current', 'page')
           } else if (menuItem.textContent === 'Home' && currenPathname === '/') {
@@ -55,7 +56,23 @@ import { Image } from 'astro:assets'
       })
     }
 
+    // start
+    const mobileDesktopMenus = mainNav.querySelectorAll('nav > ul')
 
+    mobileDesktopMenus.forEach((menu) => {
+      menu.addEventListener('click', function (event) {
+        const menuItems = [...menu.querySelectorAll('a:not([rel*="external"])')] as HTMLAnchorElement[]
+        menuItems.forEach((menuItem) => {
+          menuItem.classList.remove('is-active')
+        })
+
+        const target = event.target
+        if (target.tagName === 'A' && target.hash) {
+          target.classList.add('is-active')
+        }
+      })
+    })
+    // end
 
     const checkMenuSize = () => {
       const mainNavWidth = mainNav.getBoundingClientRect().width
@@ -185,14 +202,6 @@ import { Image } from 'astro:assets'
             targetItem = currentDropdownMenu.parentNode
             closeAllDropdownMenus()
           }
-
-          if (key === 'Tab') {
-            const currentDropdownMenu = (currentDropdownList as Element).previousElementSibling
-
-            if (dropdownMenuItems.indexOf(currentDropdownMenuItem as HTMLLIElement) === dropdownMenuItems.length - 1) {
-              closeDropdownMenu(currentDropdownMenu)
-            }
-          }
         }
 
         if (targetItem) {
@@ -222,9 +231,6 @@ import { Image } from 'astro:assets'
 
 
 
-
-
-
   
 </script>
 
@@ -237,6 +243,7 @@ import { Image } from 'astro:assets'
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+      // position: sticky;
     }
 
     &.is-desktop {
@@ -286,7 +293,7 @@ import { Image } from 'astro:assets'
     nav {
       > ul {
         display: flex;
-        gap: 1.5rem;
+        gap: 1rem;
         list-style-type: none;
 
         a,
