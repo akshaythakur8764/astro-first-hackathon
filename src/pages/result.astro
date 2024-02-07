@@ -1,7 +1,10 @@
 ---
-import DefaultLayout from '../layouts/DefaultLayout.astro'
----
+import DefaultLayout from '../layouts/DefaultLayout.astro';
+import NotFound from '../pages/404.astro';
 
+const activateResultPage = process.env.ACTIVATE_RESULT_PAGE === 'true';
+---
+{activateResultPage ? (
 <DefaultLayout title="Results">
     <section id="results" class="container">
         <div class="md:flex justify-center flex-md-equal w-full md:my-4 md:pl-4">
@@ -57,3 +60,9 @@ import DefaultLayout from '../layouts/DefaultLayout.astro'
                   </div>
                   </section>
 </DefaultLayout>
+):(
+<NotFound title="error">
+ 
+  </NotFound>
+
+)}
