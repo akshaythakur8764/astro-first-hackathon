@@ -6,11 +6,24 @@ import Feature from '../components/Feature.astro'
 import Counter from '../components/Counter.astro'
 import ContentMedia from '../components/ContentMedia.astro'
 import { Image } from 'astro:assets'
-import localBirdImage from '../images/register.png'
+import what_is from '../images/what_is.png'
+import register from '../images/register.png'
+import theme from '../images/theme.png'
+import submission from '../images/submission.png'
+import evolution from '../images/evolution.png'
+import eligibility from '../images/eligibility.png'
+import resources from '../images/resources.png'
+import poster from '../images/thumb.png'
+import focal from '../images/focal.png'
+import spoken from '../images/spoken.png'
+import IITB from '../images/IITB.png'
+import FOSSEE from '../images/FOSSEE.png'
+
+
 // const { localBirdImage = '../images/register.png' } = Astro.props
 // /home/fossee/astro-first-hackathon/src/images/register.png
 ---
-
+<!-- astro assets element <Image src={import('../images/register.png')} alt="img"/> -->
 <DefaultLayout title="Home">
   <Hero />
  
@@ -18,8 +31,8 @@ import localBirdImage from '../images/register.png'
 
   <!-- Card 1 -->
   <a href="/register" class="flex-1 card border-indigo-600 items-center justify-center rounded-md overflow-hidden m-2">
-    <!-- <Image src={import('../images/register.png')} alt="img"/> -->
-    <img  src={localBirdImage.src} alt="regi" decoding="async" />
+    
+    <img  src={register.src} alt="regi" decoding="async" />
     <!-- <img src="../images/register.png" alt="Image 1" class="w-1/4 w-25"> -->
 
     <p class="text-center mt-2">Register</p>
@@ -28,18 +41,21 @@ import localBirdImage from '../images/register.png'
   <!-- Card 2 -->
   <a href="/theme" class="flex-1 card border-indigo-600 items-center justify-center rounded-md overflow-hidden m-2">
     <!-- <img src="../images/theme.png" alt="Image 2" class="w-1/4 w-25"> -->
+    <img  src={theme.src} alt="regi" decoding="async" />
     <p class="text-center mt-2">Theme and Guidelines</p>
   </a>
 
   <!-- Card 3 -->
   <a href="/submission" class="flex-1 card border-indigo-600 items-center justify-center rounded-md overflow-hidden m-2">
     <!-- <img src="../images/submission.png" alt="Image 3" class="w-1/4 w-25"> -->
+    <img  src={submission.src} alt="regi" decoding="async" />
     <p class="text-center mt-2">Submission of animation</p>
   </a>
 
   <!-- Card 4 -->
   <a href="evolution" class="flex-1 card border-indigo-600 items-center justify-center rounded-md overflow-hidden m-2">
     <!-- <img src="../images/evolution.png" alt="Image 4" class="w-1/4 w-25"> -->
+    <img  src={evolution.src} alt="regi" decoding="async" />
     <p class="text-center mt-2">Evolution &
       Winner/Result</p>
   </a>
@@ -90,7 +106,8 @@ import localBirdImage from '../images/register.png'
        
 
           <!-- Content for the second column (.col-6) -->
-          <!-- <img src="../images/what_is.png" alt="img"> -->
+          <img src={what_is.src} alt="What is 2D-anim hackathon?" decoding="async" />
+          
        
       </div>
     </div>
@@ -104,7 +121,8 @@ import localBirdImage from '../images/register.png'
        
 
         <!-- Content for the second column (.col-6) -->
-        <!-- <img src="../images/eligibility.png" alt="img"> -->
+       
+        <img src={eligibility.src} alt="eligibility" decoding="async" />
      
     </div>
       <div class="py-3 w-full sm:w-1/2">
@@ -143,6 +161,7 @@ import localBirdImage from '../images/register.png'
 
           <!-- Content for the second column (.col-6) -->
           <!-- <img src="../images/resources.png" alt="img"> -->
+          <img src={resources.src} alt="resources" decoding="async" />
        
       </div>
     </div>
@@ -158,6 +177,7 @@ import localBirdImage from '../images/register.png'
 
         <!-- Content for the second column (.col-6) -->
         <!-- <img src="../images/poster.png" alt="poster"> -->
+        <img src={poster.src} alt="poster" decoding="async" />
      
     </div>
       <div class="py-3 w-full sm:w-1/2">
@@ -181,12 +201,14 @@ import localBirdImage from '../images/register.png'
      
         <div class="px-4 pt-4 pb-1">
           
-          <a href="http://iitb.ac.in/" target="_blank">
+          <a href="http://focal.iitb.ac.in/" target="_blank">
               <!-- <img src="../images/image2.png" class="w-full max-w-xs mx-auto logos" alt="IITB"> -->
+              <img src={focal.src} alt="poster" decoding="async" />
           </a>
           </div>
           <div class="px-4 pt-4 pb-1">
-          <a href="https://fossee.in" target="_blank">
+          <a href="https://focal.fossee.in" target="_blank">
+            <img src={focal.src} alt="fossee" decoding="async" />
               <!-- <img src="../images/image2.png" class="w-full max-w-xs mx-auto logos" alt="FOSSEE"> -->
           </a>
           <!-- <a href="http://www.rudra.iitb.ac.in/" target="_blank">
@@ -222,21 +244,25 @@ import localBirdImage from '../images/register.png'
         <div class="px-4 pt-4 pb-1">
           
           <a href="http://iitb.ac.in/" target="_blank">
+            <img src={IITB.src} alt="poster" decoding="async" />
               <!-- <img src="https://iitb-fossee-mapathon.fossee.in/static/cms/uploads/images/iitb-logo.png" class="w-full max-w-xs mx-auto logos" alt="IITB"> -->
           </a>
           </div>
           <div class="px-4 pt-4 pb-1">
           <a href="https://fossee.in" target="_blank">
+            <img src={FOSSEE.src} alt="poster" decoding="async" />
               <!-- <img src="https://iitb-fossee-mapathon.fossee.in/static/cms/uploads/images/fossee-logo.png" class="w-full max-w-xs mx-auto logos" alt="FOSSEE"> -->
           </a>
         </div>
           <div class="px-4 pt-4 pb-1">
-            <a href="https://fossee.in" target="_blank">
+            <a href="https://focal.fossee.in" target="_blank">
+              <img src={focal.src} alt="poster" decoding="async" />
                 <!-- <img src="../images/image2.png" class="w-full max-w-xs mx-auto logos" alt="FOSSEE"> -->
             </a>
           </div>
           <div class="px-4 pt-4 pb-1">
             <a href="https://fossee.in" target="_blank">
+              <img src={spoken.src} alt="poster" decoding="async" />
                 <!-- <img src="../images/image13.png" class="w-full max-w-xs mx-auto logos" alt="FOSSEE"> -->
             </a>
           <!-- <a href="http://www.rudra.iitb.ac.in/" target="_blank">
