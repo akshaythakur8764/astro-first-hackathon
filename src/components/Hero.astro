@@ -2,7 +2,10 @@
 import { Icon } from 'astro-icon/components'
 
 // const { src = '/astronaut-hero-img.webp' } = Astro.props
-const { src = 'https://hackathon.fossee.in/cfd/static/cms/uploads/images/left-img.png' } = Astro.props
+// const { fullhero = '../images/full_hero.png' } = Astro.props
+import fullhero from "../images/full_hero.png"
+
+import synfig from "../images/synfig.png"
 ---
 <!-------------#front section------------- -->
 <section class="hero my-8">
@@ -14,7 +17,8 @@ const { src = 'https://hackathon.fossee.in/cfd/static/cms/uploads/images/left-im
         </div>
         <div class="flex items-center justify-center">
 
-          <img src="../images/synfig.png" alt="img" width="75%" >
+
+          <img  src={synfig.src} alt="" decoding="async" />
         </div>
         <!-- <span class="text-gradient">CFD Hackathon</span> -->
         <div class="flex items-center justify-center flex-col gap-3 min-[500px]:flex-row">
@@ -30,7 +34,7 @@ const { src = 'https://hackathon.fossee.in/cfd/static/cms/uploads/images/left-im
         </div>
       </div>
       <!-- <img class="lg:block" src={src} alt="" decoding="async" /> -->
-      <img src="../images/full_hero.png" alt="img">
+      <img  src={fullhero.src} alt="fullhero" decoding="async" />
     </div>
   </div>
 </section>
