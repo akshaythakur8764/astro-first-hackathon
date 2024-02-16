@@ -1,5 +1,6 @@
 ---
 import DefaultLayout from '../layouts/DefaultLayout.astro'
+import Navigation from '../components/Navigation.astro'
 import Hero from '../components/Hero.astro'
 import Feature from '../components/Feature.astro'
 import Counter from '../components/Counter.astro'
@@ -8,212 +9,360 @@ import ContentMedia from '../components/ContentMedia.astro'
 
 <DefaultLayout title="Home">
   <Hero />
+ 
+ <div class="container flex justify-center py-4">
 
-  <div class="container mx-auto sm:px-4">
-   <section id="about">
-     <div class="md:flex flex-md-equal w-full md:my-4 md:pl-4">
-        <div class="md:mr-4 text-center overflow-hidden pl-4 pr-4">
-           <div class="py-3">
-              <h3 class="display-5 section-title">About the Hackathon</h3>
-           </div>
-           <div class="mx-auto bd-highlight text-justify px-3">
- 
-              <p class="text-justify">This hackathon is a platform for the CFD-OpenFOAM community to show their skills in OpenFOAM. Participants are expected to upgrade solved Case Studies into the latest versions of OpenFOAM according to the standards of <a href="https://openfoam.org/" target="_blank">openfoam.org</a> or <a href="https://www.openfoam.com/" target="_blank">openfoam.com</a>. </p>
- <p class="text-justify">The list of solved Case Studies will be released along with the Problem Statement Announcement. Please refer to the Dates Section at the top, for more details about important dates.</p>
- <p class="text-justify">The OpenFOAM Hackathon is organised by the <a href="https://fossee.in/" target="_blank">FOSSEE</a> project, IIT Bombay. FOSSEE (Free and Open Source Software for Education) trains and promotes the use of Free/ Libre Open Source Software. This project is a part of the National Mission on Education through ICT (NMEICT) funded by the Ministry of Education, Govt. of India.</p>
-           </div>
-        </div>
-     </div>
-  </section>
- 
- <!--- <section id="aboutthehackathon">
-     <div class="md:flex flex-md-equal w-full md:my-4 md:pl-4">
-        <div class="md:mr-4 text-center overflow-hidden pl-4 pr-4">
-           <div class="py-3">
-              <h3 class="display-5 section-title">About the Hackathon</h3>
-           </div>
-           <div class="mx-auto bd-highlight px-3">
-               <p class="text-justify"><span>In this Hackathon participants will be judged on their skills on speed and accuracy to upgrade a solved Case Study (Examples of solved problems on CFD using OpenFOAM) to the recent version of OpenFOAM v11 (according to <a href="https://openfoam.org/release/11/" target="_blank">openfoam.org</a>) and OpenFOAM v2306 (according to <a href="https://www.openfoam.com/news/main-news/openfoam-v2306" target="_blank">openfoam.com</a>). Each Case Study will carry specific (i) Points according to the level of difficulty to solve and (ii) Number of days the participants will get to solve the problem. In case, a participant cannot provide a solution to the Case Study that was selected by him/ her, the problem will be released back to the repository of available problems. The Hackathon will be open for 15 days. Participants can choose problems of different complexity based on the (i) Points (ii) Days to solve the problem.</span>
-              </p>
-           </div>
-        </div>
-     </div>
-  </section>--->
- <!-------------PARTICIPATION STEPS/ GIDELINES--------------------->
- 
- <!---<section id="participation">
-     <div class="md:flex flex-md-equal w-full md:my-4 md:pl-4">
-        <div class="md:mr-4 text-center overflow-hidden pl-4 pr-4">
-           <div class="py-3">
-              <h3 class="display-5 section-title">Participation Steps/ Guidelines</h3>
-           </div>
-           <div class="mx-auto bd-highlight text-justify px-3">
- 
-              <p class="text-justify">
- <ol>
- <li><strong>Step 1:</strong><span> There will be a pool of Case Studies (Examples of solved problems on CFD using OpenFOAM). Choose a single/ multiple Case Study(ies) from a pool of solved examples in OpenFOAM</span></li>
- <li><strong>Step 2:</strong><span> Upgrade the selected Case Study to the recent version of OpenFOAM. The recent version of OpenFOAM can be according to openfoam.org (v11) or openfoam.com (v2306)</span></li>
- <li><strong>Step 3:</strong><span> If you can upgrade the Case Study within the stipulated time, please submit the Case Study. Submission guidelines will be announced along with problem statement announcement. If you are not able to complete the activity within the stipulated time period, the Case Study will be automatically released in the problem pool for others to take up. You may select another Case Study later, and submit within the deadline.</span></li>
- </ol>
- <p><strong>Note: </strong><mark>Participants will get a total 15 days period to solve a single/ multiple problems selected.</mark></p>
- <p><strong>Tips: </strong>Participants can select multiple simple problems which will require a lesser amount of time OR select a complex problem which will require more time. Participants can use self judgment to choose problems for the Hackathon.The winner will be judged based on the candidate who has scored the maximum number of points. In case of a tie, the selection panel will look into their submissions and make a decision</p>
-           </div>
-        </div>
-     </div>
-  </section>-->
- <!-------------RESOURCES-------------->
-  <section id="resources" style="background-color: #005a9c;background-image: url('https://hackathon.fossee.in/cfd/static/cms/uploads/images/webtop-bg-blank.png');background-size: cover;background-attachment: fixed;">
-     <div class="md:flex flex-md-equal w-full md:my-4 md:pl-4">
-        <div class="md:mr-4 pt-3 text-center overflow-hidden">
-           <div class="py-3">
-              <h3 class="display-5 section-title" style="color:white;">Resources</h3>
-           </div>
- <p style="color:white;">Interested candidates who want to participate in the Hackathon with limited knowledge of OpenFOAM can augment their skills by using the following resources:</p>
-           <div class="container mx-auto sm:px-4">
-     <div class="flex flex-wrap ">
-         <div class="md:w-1/3 pr-4 pl-4 mb-4">
-             <div class="relative flex flex-col min-w-0 rounded break-words border border-1 border-gray-300 shadow" style="background-color:  var(--background);">
-              <i class="bi bi-book-fill"></i>
-                 <div class="flex-auto p-6">
-                     <h5 class="mb-3">Spoken Tutorials to learn OpenFOAM:</h5>
-                     <p class="mb-0"><a title="https://cfd.fossee.in/resources" href="https://cfd.fossee.in/resources" target="_blank">CFD
-                       Resources</a></p>
-                       <p class="mb-0">&nbsp;</p>
-                     
-                 </div>
-             </div>
-         </div>
-         <div class="md:w-1/3 pr-4 pl-4 mb-4">
-           <div class="relative flex flex-col min-w-0 rounded break-words border bg-white border-1 border-gray-300 shadow">
-               <div class="flex-auto p-6">
-                   <h5 class="mb-3">OpenFOAM v2212 (.com version):</h5>
-                   <p class="mb-0"><a href="https://doc.openfoam.com/2212/" target="_blank">OpenFOAM Tutorial Guide</a></p>
-                    <p class="mb-0">&nbsp;</p>
-               </div>
-           </div>
-       </div> <div class="md:w-1/3 pr-4 pl-4 mb-4">
-        <div class="relative flex flex-col min-w-0 rounded break-words border bg-white border-1 border-gray-300 shadow">
+  <!-- Card 1 -->
+  <a href="/register" class="flex-1 card border-indigo-600 items-center justify-center rounded-md overflow-hidden m-2">
+   
+    <img src="../src/assets/img/register.png" alt="Image 1" class="w-1/4 w-25">
+
+    <p class="text-center mt-2">Register</p>
+  </a>
+
+  <!-- Card 2 -->
+  <a href="/theme" class="flex-1 card border-indigo-600 items-center justify-center rounded-md overflow-hidden m-2">
+    <img src="./src/assets/img/theme.png" alt="Image 2" class="w-1/4 w-25">
+    <p class="text-center mt-2">Theme and Guidelines</p>
+  </a>
+
+  <!-- Card 3 -->
+  <a href="/submission" class="flex-1 card border-indigo-600 items-center justify-center rounded-md overflow-hidden m-2">
+    <img src="./src/assets/img/submission.png" alt="Image 3" class="w-1/4 w-25">
+    <p class="text-center mt-2">Submission of animation</p>
+  </a>
+
+  <!-- Card 4 -->
+  <a href="evolution" class="flex-1 card border-indigo-600 items-center justify-center rounded-md overflow-hidden m-2">
+    <img src="./src/assets/img/evolution.png" alt="Image 4" class="w-1/4 w-25">
+    <p class="text-center mt-2">Evolution &
+      Winner/Result</p>
+  </a>
+
+</div>
+  
+<section id="about">
+  <section id="what_is">
+    <div class="container py-3 mx-auto sm:px-4" style=" background-color:#c9daf8 ;">
+      <div class="flex flex-wrap">
+        <div class="py-3 w-full sm:w-1/2 flex items-center justify-center">
+         
+  
+          <!-- Content for the second column (.col-6) -->
+          <video width="320" height="240" controls>
+            <source src="" type="video/mp4">
            
+          Your browser does not support the video tag.
+          </video> 
+       
+      </div>
+        <div class="py-3 w-full sm:w-1/2">
+          <!-- Content for the first column (.col-9) -->
+          <h1 class="section-title">About Synfig Studio 2D animation Hackathon</h1>
+          <p class="text-justify">FOSSEE, IIT Bombay in association with Whistling Woods International is hosting an online Synfig Studio 2D Animation Hackathon. Synfig Studio is a cross-platform free and open source vector-based 2D animation software which is designed to produce film-quality animation with minimum resources. So get started, avail this opportunity to upgrade your skills and enhance your career. 
+            We welcome newbies and veterans- from high school students to professionals and FLOSS enthusiasts to take part in this Hackathon.
+             </p>
+        </div>
+      
+      </div>
+    </div>
+  </section>
+  
+</section>
+
+
+
+<!-------------------------------- -->
+<section id="what_is">
+  <div class="container py-3 mx-auto sm:px-4">
+    <div class="flex flex-wrap">
+      <div class="py-3 w-full sm:w-1/2">
+        <!-- Content for the first column (.col-9) -->
+        <h1 class="section-title">What is the Synfig Studio 2D animation Hackathon?</h1>
+        <p class="text-justify">During the Hackathon the participants will create an original 2D animated short movie of about 3 mins duration using Synfig Studio. You should make the animation (graphics, audio, etc.) using ONLY open source software. You can make the narration in English or in the 22 scheduled Indian languages.</p>
+      </div>
+      <div class="py-3 w-full sm:w-1/2 flex items-center justify-center">
+       
+
+          <!-- Content for the second column (.col-6) -->
+          <img src="/src/assets/img/what_is.png" alt="img">
+       
+      </div>
+    </div>
+  </div>
+</section>
+<!------------- -->
+<section id="eligibility">
+  <div class="container py-3 mx-auto sm:px-4" style=" background-color:#c9daf8 ;">
+    <div class="flex flex-wrap">
+      <div class="py-3 w-full sm:w-1/2 flex items-center justify-center">
+       
+
+        <!-- Content for the second column (.col-6) -->
+        <img src="/src/assets/img/eligibility.png" alt="img">
+     
+    </div>
+      <div class="py-3 w-full sm:w-1/2">
+        <!-- Content for the first column (.col-9) -->
+        <h1 class="section-title">Eligibility to participate:</h1>
+        <div class="text-justify"><ul style="list-style:circle;">
+          <li>The hackathon is open to all.</li>
+          <li>Participate as an individual or as a team (max. 4 members).</li>
+          <li>High school/college students, faculty, professionals (animators, designers etc.) from any field who are interested in creating animations.</li>
+          <li>Knowledge of basic graphics, designing and animation is required.</li>
+          <li>Prior knowledge of using Synfig Studio to create 2D animation is expected. If you are self motivated and want to participate you can self learn Synfig Studio using Spoken tutorials. These are available in English, Hindi, Kannada, Marathi, Malayalam, Tamil and Telugu.</li>
+          </ul></div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-------- -->
+
+<section id="resources">
+  <div class="container py-3 mx-auto sm:px-4">
+    <div class="flex flex-wrap">
+      <div class="py-3 w-full sm:w-1/2">
+        <!-- Content for the first column (.col-9) -->
+        <h1 class="section-title">Some Helpful Resources for Hackathon:</h1>
+        <div class="text-justify"><ul style="list-style:circle;">
+          <li>Self learn Synfig Studio using Spoken Tutorials. These are available in English, Hindi, Kannada, Marathi, Malayalam, Tamil and Telugu.</li>
+          <li>For making the animation, if you want to create graphics, record audio, etc., you can use some other software. But as there is a requirement to strictly use Open Source Software in this hackathon, you can use GIMP, Audacity, Inkscape, Openshot video editor etc. for the same. You can self learn these software using the Spoken Tutorials which are freely available. These are available in English, Hindi, Kannada, Marathi, Malayalam, Tamil and Telugu.</li>
+          <li>For help in installing Synfig Studio, please click here.</li>
+          <li>Refer graphics from our FOCAL (free and open source creative art library) repository.</li>
+          </ul></div>
+      </div>
+      <div class="py-3 px-3 w-full sm:w-1/2 flex items-center justify-center">
+       
+
+          <!-- Content for the second column (.col-6) -->
+          <img src="/src/assets/img/resources.png" alt="img">
+       
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-------------------- -->
+<section id="poster">
+  <div class="container py-3 mx-auto sm:px-4"  style=" background-color:#c9daf8 ;">
+    <div class="flex flex-wrap">
+      <div class="py-3 w-full sm:w-1/2 flex items-center justify-center">
+       
+
+        <!-- Content for the second column (.col-6) -->
+        <img src="/src/assets/img/poster.png" alt="poster">
+     
+    </div>
+      <div class="py-3 w-full sm:w-1/2">
+        <!-- Content for the first column (.col-9) -->
+        <h1 class="section-title">Poster to publish</h1>
+        <div class="text-justify">We request you to share the event details through this poster with high school/college students, faculty, animators, graphic designers, and FOSS enthusiasts who might be interested. Download the poster by clicking on the image.</div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+<!-------------- -->
+<section id="partners1" class="py-3">
+  <div class="container flex items-center justify-center">
+<h1 class="section-title">- Endorsement Partners -</h1>
+</div>
+<div class="banner-content">
+  <div id="top-logo-placeholder" class="container mx-auto sm:px-4 rounded min-w-sm mx-auto px-5 bg-white flex px-3 mx-3 justify-center">
+   
+      
+     
+        <div class="px-4 pt-4 pb-1">
+          
+          <a href="http://iitb.ac.in/" target="_blank">
+              <img src="/src/assets/img/image2.png" class="w-full max-w-xs mx-auto logos" alt="IITB">
+          </a>
+          </div>
+          <div class="px-4 pt-4 pb-1">
+          <a href="https://fossee.in" target="_blank">
+              <img src="/src/assets/img/image2.png" class="w-full max-w-xs mx-auto logos" alt="FOSSEE">
+          </a>
+          <!-- <a href="http://www.rudra.iitb.ac.in/" target="_blank">
+              <img src="https://iitb-fossee-mapathon.fossee.in/static/cms/uploads/images/rudra-logo.png" class="w-full max-w-xs mx-auto logos" alt="Rudra">
+          </a>
+          <a href="https://www.iittp.ac.in/" target="_blank">
+              <img src="https://iitb-fossee-mapathon.fossee.in/static/cms/uploads/images/iit-tirupati.png" class="w-full max-w-xs mx-auto logos" alt="IIT Tirupati">
+          </a>
+          <a href="https://iittnif.com/" target="_blank">
+              <img src="https://iitb-fossee-mapathon.fossee.in/static/cms/uploads/images/navavishkaar.png" class="w-full max-w-xs mx-auto logos" alt="IITTNiF">
+          </a>
+          <a href="https://nmicps.in/" target="_blank">
+              <img src="https://iot-gis-hackathon.fossee.org/static/cms/uploads/images/NM-ICPS-logo1.png" class="w-full max-w-xs mx-auto logos" alt="NMICPS">
+          </a> -->
+          
+         
+        </div>
+              
+  </div>
+</div>
+</section>
+<!----------------------->
+<section id="partners2" class="py-3">
+  <div class="container flex items-center justify-center">
+
+    <h1 class="section-title">- Sponsors and Partners -</h1>
+  </div>
+<div class="banner-content">
+  <div id="top-logo-placeholder" class="container mx-auto sm:px-4 rounded min-w-sm mx-auto px-5 bg-white flex px-3 mx-3 justify-center">
+   
+      
+     
+        <div class="px-4 pt-4 pb-1">
+          
+          <a href="http://iitb.ac.in/" target="_blank">
+              <img src="https://iitb-fossee-mapathon.fossee.in/static/cms/uploads/images/iitb-logo.png" class="w-full max-w-xs mx-auto logos" alt="IITB">
+          </a>
+          </div>
+          <div class="px-4 pt-4 pb-1">
+          <a href="https://fossee.in" target="_blank">
+              <img src="https://iitb-fossee-mapathon.fossee.in/static/cms/uploads/images/fossee-logo.png" class="w-full max-w-xs mx-auto logos" alt="FOSSEE">
+          </a>
+        </div>
+          <div class="px-4 pt-4 pb-1">
+            <a href="https://fossee.in" target="_blank">
+                <img src="/src/assets/img/image2.png" class="w-full max-w-xs mx-auto logos" alt="FOSSEE">
+            </a>
+          </div>
+          <div class="px-4 pt-4 pb-1">
+            <a href="https://fossee.in" target="_blank">
+                <img src="/src/assets/img/image13.png" class="w-full max-w-xs mx-auto logos" alt="FOSSEE">
+            </a>
+          <!-- <a href="http://www.rudra.iitb.ac.in/" target="_blank">
+              <img src="https://iitb-fossee-mapathon.fossee.in/static/cms/uploads/images/rudra-logo.png" class="w-full max-w-xs mx-auto logos" alt="Rudra">
+          </a>
+          <a href="https://www.iittp.ac.in/" target="_blank">
+              <img src="https://iitb-fossee-mapathon.fossee.in/static/cms/uploads/images/iit-tirupati.png" class="w-full max-w-xs mx-auto logos" alt="IIT Tirupati">
+          </a>
+          <a href="https://iittnif.com/" target="_blank">
+              <img src="https://iitb-fossee-mapathon.fossee.in/static/cms/uploads/images/navavishkaar.png" class="w-full max-w-xs mx-auto logos" alt="IITTNiF">
+          </a>
+          <a href="https://nmicps.in/" target="_blank">
+              <img src="https://iot-gis-hackathon.fossee.org/static/cms/uploads/images/NM-ICPS-logo1.png" class="w-full max-w-xs mx-auto logos" alt="NMICPS">
+          </a> -->
+          
+         
+        </div>
+              
+  </div>
+</div>
+</section>
+<!------------------- style="background-color: #005a9c;background-image: url('https://hackathon.fossee.in/cfd/static/cms/uploads/images/webtop-bg-blank.png');background-size: cover;background-attachment: fixed;"--------------------- -->
+<section id="resources" class="py-3">
+  <div class="container md:flex flex-md-equal w-full md:my-4 md:pl-4">
+     <div class="md:mr-4 pt-3 text-center overflow-hidden">
+        <div class="py-3">
+           <h1 class="section-title">Previous hackathon Videos:</h3>
+        </div>
+<p class="text-justify">The videos mentioned below are the award winning entries under the "Synfig Studio 2D Animation Hackathon" that took place in January 2021. These videos are provided as samples only, and to check the new Theme for " Synfig Studio 2d Animation Hackathon 2024. (Theme:  Celebrating India's innovation)</p>
+        <div class="container mx-auto sm:px-4">
+  <div class="flex flex-wrap ">
+      <div class="md:w-1/4 pr-4 pl-4 mb-4">
+          <div class="relative flex flex-col min-w-0 rounded break-words border border-1 border-gray-300 shadow" style="background-color:  var(--background);">
+           
+              <div class="flex-auto p-6">
+                  <h5 class="mb-3"> The submission that 
+                    stood first in the previous hackathon</h5>
+                  <p class="mb-0">Click <a href="https://static.fossee.in/focal/videos/SS2DH1408.mp4" target="_blank">here</a> to watch</p>
+                   
+                  
+              </div>
+          </div>
+      </div>
+      <div class="md:w-1/4 pr-4 pl-4 mb-4">
+        <div class="relative flex flex-col min-w-0 rounded break-words border bg-white border-1 border-gray-300 shadow">
             <div class="flex-auto p-6">
-                <h5 class="mb-3">OpenFOAM v10 (.org version):</h5>
-                <p class="mb-0"><a href="https://doc.cfd.direct/openfoam/user-guide-v10/contents" target="_blank">OpenFOAM User Guide</a></p>
-                    <p class="mb-0">&nbsp;</p>
-                    <p class="mb-0">&nbsp;</p>
- <!--                  <p class="mb-0"><a title="https://cfd.direct/openfoam/v11-productive-cfd"
-                    href="https://cfd.direct/openfoam/v11-productive-cfd" target="_blank">Productive CFD v11</a></p> -->
-               
+                <h5 class="mb-3">The animation 
+                  submitted by the Youngest participant.</h5>
+                <p class="mb-0">Click <a href="https://static.fossee.in/focal/videos/SS2DH0209.mp4" target="_blank">here</a> to watch</p>
             </div>
         </div>
-    </div> 
-       
-     </div>
- </div>
-        </div>
-     </div>
-  </section>
- 
- <!------------REGISTER------------->
-  <section id="register">
-     <div class="flex-md-equal w-full md:my-4 md:pl-4">
-        <div class="md:mr-4 text-center overflow-hidden pl-4 pr-4">
-           <div class="py-3">
-              <h3 class="display-5 section-title">Registration</h3>
-           </div>
-           <div class="mx-auto bd-highlight text-center px-3">
- Please click on the following button to register yourself for the Hackathon
-              <p class="md:flex justify-center items-center"> <a
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSc5INelxs9--J_z25zGRgr3PfEn68ePuJE5mZD2oCB9DZ4pMw/viewform?usp=pp_url"
-                    target="_blank"><button type="button" class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline text-blue-600 border-blue-600 hover:bg-blue-600 hover:text-green bg-white hover:bg-blue-600">Click here</button></a></p>
-              <figure  class="md:flex justify-center items-center"><img src="https://hackathon.fossee.in/cfd/static/cms/uploads/images/QR-code-gform.png"
-                    alt="QRcode" style="height:50%; width: 150px;">
+    </div> <div class="md:w-1/4 pr-4 pl-4 mb-4">
+     <div class="relative flex flex-col min-w-0 rounded break-words border bg-white border-1 border-gray-300 shadow">
+        
+         <div class="flex-auto p-6">
+             <h5 class="mb-3">The prize winning animation in Hindi</h5>
+             <p class="mb-0">Click <a href="https://static.fossee.in/focal/videos/SS2DH0170.mp4" target="_blank">here</a> to watch</p>
+             <p class="mb-0">&nbsp;</p>
                 
-              </figure>
-              <p style="margin-top: 10px">
-               Scan this QR Code to register
-            </p>
- <p><strong>Please Note:</strong><mark> Participation in teams is not allowed. Please register as single participants.</mark></p>
-           </div>
-        </div>
+<!--                  <p class="mb-0"><a title="https://cfd.direct/openfoam/v11-productive-cfd"
+                 href="https://cfd.direct/openfoam/v11-productive-cfd" target="_blank">Productive CFD v11</a></p> -->
+            
+         </div>
      </div>
-  </section>
- 
- 
-  <!-----------CONTACT US---------->
-  <section id="contact-us">
-     <div class="flex-md-equal w-full md:my-4 md:pl-4">
-        <div class="md:mr-4 text-center overflow-hidden pl-4 pr-4">
-           <div class="py-3">
-              <h3 class="display-5 section-title">Contact Us <i class="far fa-envelope"></i></h3>
-              <p>Please write to us in case of any queries regarding the Hackathon at:</p>
-           </div>
-           <div class="mx-auto" style="border-radius: 21px 21px 21px 21px; font-size: 14pt">
-              Email :<a href="mailto:contact-cfd@fossee.in">contact-cfd[at]fossee[dot]in</a>
-           </div>
- <p>Please connect to us and interact with the FOSSEE team members through the following <a href="https://join.slack.com/t/fosseeopenfoam/shared_invite/zt-26wvdcemr-KhXIGM2fnh7LL0xGLGohMw" target="_blank">Slack channel</a></p>
-        </div>
+ </div> 
+ <div class="md:w-1/4 pr-4 pl-4 mb-4">
+  <div class="relative flex flex-col min-w-0 rounded break-words border bg-white border-1 border-gray-300 shadow">
+      <div class="flex-auto p-6">
+          <h5 class="mb-3">The prize winning animation in Tamil.</h5>
+          <p class="mb-0">Click <a href="https://static.fossee.in/focal/videos/SS2DH0144.mp4" target="_blank">here</a> to watch</p>
+          <p class="mb-0">&nbsp;</p>
+           
+      </div>
+  </div>
+</div>
+  </div>
+</div>
      </div>
-  </section>
-   <!-- <section class="my-64">
-     <div class="container mx-auto sm:px-4">
-       <h2 class="mb-16 text-6xl">Features</h2>
-       <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-         <Feature icon="mdi:tailwind" title="Tailwind CSS">
-           Use the power of Tailwind to greatly improve your productivity and enhance your developer workflow.
-         </Feature>
-         <Feature icon="mdi:wheelchair-accessibility" title="a11y Components">
-           17 components and counting, all tried and tested for the most optimal accessible experience for your visitors.
-         </Feature>
-         <Feature icon="mdi:looks" title="Prettier">
-           Less worry about formatting your code, let the Astro Prettier integration do the heavy lifting.
-         </Feature>
-         <Feature icon="mdi:eslint" title="ESLint">
-           Lint your code with strict a11y settings to ensure you stay on track with the WCAG standards.
-         </Feature>
-         <Feature icon="mdi:book-open-page-variant" title="Blog">
-           This theme comes with a fully integrated blog, dynamic pages and SEO optimization.
-         </Feature>
-         <Feature icon="mdi:language-markdown" title="Markdown & MDX">
-           Easily use .md and .mdx pages to build your websites or use it with Netlify CMS.
-         </Feature>
-         <Feature icon="mdi:theme-light-dark" title="Dark mode">
-           Fully integrated Dark mode gives your users the choice for their favorite viewing mode.
-         </Feature>
-         <Feature icon="mdi:cog" title="Design System">
-           The theme offers some very handy utilities to help you build your website faster.
-         </Feature>
-         <Feature icon="mdi:lighthouse" title="Lighthouse Scores">
-           Excellent lighthouse scores means your website will load faster and get better SEO rankings.
-         </Feature>
-       </div>
-     </div>
-   </section>
-   <ContentMedia imgSrc="/accessible-components.webp">
-     <h2>Accessible Components</h2>
-     <p class="text-2xl">
-       This theme provides plenty of tried and tested Accessible Astro Components. Some are native to this theme and a
-       lot of others are integrated using a <a href="https://github.com/markteekman/accessible-astro-components"
-         >separate package</a
-       >. They'll get you up and running in building an accessible solution for your visitors.
-     </p>
-   </ContentMedia>
-   <ContentMedia imgSrc="/wcag-compliant.webp" reverseImg={true}>
-     <h2>WCAG 2.1 AA Compliant</h2>
-     <p class="text-2xl">
-       Using semantic HTML, landmarks, skip links, screen reader friendly content, aria-labels, keyboard accessible
-       navigation and components, clear outlines and tab indicators and the right color contrast, you're more certain of
-       reaching WCAG AA compliance.
-     </p>
-   </ContentMedia>
-   <section class="mb-32 mt-64">
-     <div class="container mx-auto sm:px-4">
-       <h2 class="mb-16 text-6xl">Counters</h2>
-       <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4">
-         <Counter count="520" title="Stars" sub="On GitHub" />
-         <Counter count="17" title="Accessible" sub="Components" />
-         <Counter count="500" title="Commits" sub="Merged" />
-         <Counter count="18+" title="Months" sub="Since launch" />
-       </div>
-     </div>
-   </section> -->
-   </div>
+  </div>
+</section>
+<!---------------------- -->
+<section id="rules" class="py-3">
+<div class="container pt-3" style="background-color: #bbab8b;">
+  <div class="flex items-center justify-center" style="background-color: #ffffff;">
+
+    <h1 class="section-title">Rules and Regulations</h1>
+  </div>
+  <div class="container">
+
+    <ul style="list-style:circle;">
+      <li>The decision of the review committee and organizers in declaring the results will be final. No queries in this regard will be entertained.</li>
+      <li>The same person can not participate in more than one team.</li>
+      <li>If a person is found participating in more than one team, both teams will be disqualified from the Hackathon.</li>
+      <li>Use ONLY Synfig Studio for creating animations. Create the supporting graphics, audio, etc. using only open source software. You are not allowed to use any proprietary software in your animation in any aspect. If found, you or your team will be disqualified.</li>
+      <li>The accepted submissions shall be released and published under open source license in the public domain. The copyright should be transferred to the FOSSEE project.</li>
+      <li>The team lead will be only one point of contact with the organizers.</li>
+      <li>Any participant found to be indulging in any form of malpractice will be immediately disqualified.</li>
+    </ul>
+  </div>
+  </div>
+</section>
+<!------- -->
+<section id="contact-us">
+  <div class="container py-3">
+    <div class="flex items-center justify-center">
+  
+      <h1 class="section-title">Contact us</h1>
+    </div>
+    <div class="container flex items-center justify-center">
+  <a href="mailto:info@fossee.in">info@fossee.in</a>&nbsp; | &nbsp;<a href="mailto:contact-focal@fossee.in">contact-focal@fossee.in</a>
+    </div>
+    </div>
+
+</section>
+<style lang="css">
+  
+  /************top logos*****************/
+  
+  .logos {
+    max-width: 100%;
+    height: 53.8px;
+    padding-left: 20px;
+  }
+  @media(max-width:998px){
+    .logos {
+      max-width: 100%;
+      height: auto;
+      padding-left: 0;
+    }
+  }
+  
+  </style>
+
 </DefaultLayout>

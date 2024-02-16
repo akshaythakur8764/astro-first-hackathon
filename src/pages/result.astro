@@ -58,11 +58,50 @@ const activateResultPage = process.env.ACTIVATE_RESULT_PAGE === 'true';
             
                     </div>
                   </div>
+
+                  <dialog>
+  <button autofocus>Close</button>
+  <p>This modal dialog has a groovy backdrop!</p>
+</dialog>
+<button>Show the dialog</button>
                   </section>
 </DefaultLayout>
 ):(
 <NotFound title="error">
+  
+
  
   </NotFound>
 
 )}
+
+<style>
+  ::backdrop {
+  background-image: linear-gradient(
+    45deg,
+    magenta,
+    rebeccapurple,
+    dodgerblue,
+    green
+  );
+  opacity: 0.75;
+}
+
+</style>
+
+<script lang="js">
+  const dialog = document.querySelector("dialog");
+const showButton = document.querySelector("dialog + button");
+const closeButton = document.querySelector("dialog button");
+
+// "Show the dialog" button opens the dialog modally
+showButton.addEventListener("click", () => {
+  dialog.showModal();
+});
+
+// "Close" button closes the dialog
+closeButton.addEventListener("click", () => {
+  dialog.close();
+});
+
+</script>

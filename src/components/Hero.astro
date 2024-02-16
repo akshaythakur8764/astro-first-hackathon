@@ -9,22 +9,28 @@ const { src = 'https://hackathon.fossee.in/cfd/static/cms/uploads/images/left-im
   <div class="container">
     <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
       <div class="flex flex-col items-center gap-8 md:items-start">
-        <h4 class="text-center text-4xl md:text-left lg:text-4xl">
-          <slot><span class="text-gradient">CFD Hackathon</span> Get ready to show your skills</slot>
-        </h4>
-        <div class="flex flex-col gap-3 min-[500px]:flex-row">
-          <div class="m-3 dates p-3">
-            <p class="important-dates"><strong>Registration opens: </strong>November 15, 2023</p>
-            <p class="important-dates"><strong>Registration closes: </strong>February 28, 2024</p>
-           <p class="important-dates"><strong>Hackathon start date : </strong>March 01, 2024 (tentative)</p>
+        <div class="text-center text-2xl md:text-left lg:text-2xl">
+          <slot> An initiative of the FOSSEE Project, IIT Bombay in association with  ......</slot>
+        </div>
+        <div class="flex items-center justify-center">
+
+          <img src="/src/assets/img/synfig.png" alt="img" width="75%" >
+        </div>
+        <!-- <span class="text-gradient">CFD Hackathon</span> -->
+        <div class="flex items-center justify-center flex-col gap-3 min-[500px]:flex-row">
+          <div class="dates">
+            <p class="important-dates text-green-600 flex items-center justify-center"><strong>Registration starts on: </strong>15 March 2024</p>
+            <p class="important-dates text-blue-600 flex items-center justify-center"><strong>Submission duration: </strong>1 April - 21 April 2024</p>
+           <!-- <p class="important-dates"><strong>Hackathon start date : </strong>March 01, 2024 (tentative)</p> -->
             <!--<p class="important-dates"><strong>Problem Statement Announcement + Submission Opens: </strong>12th Nov</p>
             <p class="important-dates"><strong>Submission Closes:</strong> 28th Nov</p>
             <p class="important-dates"><strong>Result Declaration:</strong> 14th Dec</p>-->
-           <a href="home#register"><button class="custom-btn btn-register" "="">Register</button> </a>
+           <!-- <a href="home#register"><button class="custom-btn btn-register" >Register</button> </a> -->
 </div>
         </div>
       </div>
-      <img class="lg:block" src={src} alt="" decoding="async" />
+      <!-- <img class="lg:block" src={src} alt="" decoding="async" /> -->
+      <img src="/src/assets/img/full_hero.png" alt="img">
     </div>
   </div>
 </section>
