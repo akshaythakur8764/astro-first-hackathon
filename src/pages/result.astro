@@ -2,12 +2,12 @@
 import DefaultLayout from '../layouts/DefaultLayout.astro';
 import NotFound from '../pages/404.astro';
 
-const activateResultPage = process.env.ACTIVATE_RESULT_PAGE === 'true';
+
 ---
-{activateResultPage ? (
+
 <DefaultLayout title="Results">
-    <section id="results" class="container">
-        <div class="md:flex justify-center flex-md-equal w-full md:my-4 md:pl-4">
+    <section id="results" class="container pb-3">
+        <div class="md:flex py-3 my-3 justify-center flex-md-equal w-full md:my-4 md:pl-4">
           <div class=" md:mr-4 overflow-hidden pl-4 pr-4">
             <div class="py-3">
               <h4 class="display-5 section-title text-center">Results</h4>
@@ -59,21 +59,15 @@ const activateResultPage = process.env.ACTIVATE_RESULT_PAGE === 'true';
                     </div>
                   </div>
 
-                  <dialog>
+                  <!--<dialog>
   <button autofocus>Close</button>
   <p>This modal dialog has a groovy backdrop!</p>
 </dialog>
-<button>Show the dialog</button>
+<button>Show the dialog</button>-->
                   </section>
 </DefaultLayout>
-):(
-<NotFound title="error">
-  
 
- 
-  </NotFound>
 
-)}
 
 <style>
   ::backdrop {

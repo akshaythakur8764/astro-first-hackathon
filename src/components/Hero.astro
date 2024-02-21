@@ -6,6 +6,7 @@ import { Icon } from 'astro-icon/components'
 import fullhero from "../images/full_hero.png"
 
 import synfig from "../images/synfig.png"
+import herogif from '../images/first.gif'
 ---
 <!-------------#front section------------- -->
 <section class="hero my-8">
@@ -33,10 +34,16 @@ import synfig from "../images/synfig.png"
 </div>
         </div>
       </div>
+      <div>
       <!-- <img class="lg:block" src={src} alt="" decoding="async" /> -->
       <img  src={fullhero.src} alt="fullhero" decoding="async" />
+      <div class="flex items-center justify-center pt-3">
+      <img src={herogif.src} alt="fullhero" decoding="async" />
+      </div>
+      </div>
     </div>
   </div>
+  
 </section>
 
 <style lang="scss">

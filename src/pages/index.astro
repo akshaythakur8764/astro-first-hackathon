@@ -20,6 +20,7 @@ import IITB from '../images/IITB.png'
 import FOSSEE from '../images/FOSSEE.png'
 
 
+
 // const { localBirdImage = '../images/register.png' } = Astro.props
 // /home/fossee/astro-first-hackathon/src/images/register.png
 ---
@@ -71,11 +72,7 @@ import FOSSEE from '../images/FOSSEE.png'
          
   
           <!-- Content for the second column (.col-6) -->
-          <video width="320" height="240" controls>
-            <source src="" type="video/mp4">
-           
-          Your browser does not support the video tag.
-          </video> 
+          <iframe width="480" height="315" src="https://www.youtube.com/embed/UXk_v_sukGU?si=tVK_d4-posQa-RvW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
        
       </div>
         <div class="py-3 w-full sm:w-1/2">
@@ -102,12 +99,16 @@ import FOSSEE from '../images/FOSSEE.png'
         <!-- Content for the first column (.col-9) -->
         <h1 class="section-title">What is the Synfig Studio 2D animation Hackathon?</h1>
         <p class="text-justify">During the Hackathon the participants will create an original 2D animated short movie of about 3 mins duration using Synfig Studio. You should make the animation (graphics, audio, etc.) using ONLY open source software. You can make the narration in English or in the 22 scheduled Indian languages.</p>
+      <div class="bg-green-400 text-2xl mt-1 p-2">
+<p>Guiding sessions to the participants on how to use Synfig Studio</p>
+<p><strong>Dates: 22 March and 4 April 2024</strong></p>
+      </div>
       </div>
       <div class="py-3 w-full sm:w-1/2 flex items-center justify-center">
        
 
           <!-- Content for the second column (.col-6) -->
-          <img src={what_is.src} alt="What is 2D-anim hackathon?" decoding="async" />
+          <img src={what_is.src} alt="What is 2D-anim hackathon?" decoding="async" style="height:340px" />
           
        
       </div>
@@ -123,18 +124,18 @@ import FOSSEE from '../images/FOSSEE.png'
 
         <!-- Content for the second column (.col-6) -->
        
-        <img src={eligibility.src} alt="eligibility" decoding="async" />
+        <img src={eligibility.src} alt="eligibility" decoding="async" style="width:360px"/>
      
     </div>
       <div class="py-3 w-full sm:w-1/2">
         <!-- Content for the first column (.col-9) -->
         <h1 class="section-title">Eligibility to participate:</h1>
-        <div class="text-justify"><ul style="list-style:circle;">
-          <li>The hackathon is open to all.</li>
-          <li>Participate as an individual or as a team (max. 4 members).</li>
-          <li>High school/college students, faculty, professionals (animators, designers etc.) from any field who are interested in creating animations.</li>
-          <li>Knowledge of basic graphics, designing and animation is required.</li>
-          <li>Prior knowledge of using Synfig Studio to create 2D animation is expected. If you are self motivated and want to participate you can self learn Synfig Studio using <a href="spoken-tutorial.org">Spoken tutorials</a>. These are available in English, Hindi, Kannada, Marathi, Malayalam, Tamil and Telugu.</li>
+        <div class="text-justify"><ul class="list-disc">
+          <li class="mb-2">Participate as an individual or as a team (max. 4 members).</li>
+          <li class="mb-2">High school/college students, faculty, professionals (animators, designers etc.) from any field who are interested in creating animations.</li>
+          <li class="mb-2">Knowledge of basic graphics, designing and animation is required.</li>
+          <li class="mb-2">Prior knowledge of using Synfig Studio to create 2D animation is expected. If you are self motivated and want to participate you can self learn Synfig Studio using <a href="spoken-tutorial.org">Spoken tutorials</a>. These are available in English, Hindi, Kannada, Marathi, Malayalam, Tamil and Telugu.</li>
+          <li class="mb-2">The hackathon is open to all.</li>
           </ul></div>
       </div>
       
@@ -150,11 +151,11 @@ import FOSSEE from '../images/FOSSEE.png'
       <div class="py-3 w-full sm:w-1/2">
         <!-- Content for the first column (.col-9) -->
         <h1 class="section-title">Some Helpful Resources for Hackathon:</h1>
-        <div class="text-justify"><ul style="list-style:circle;">
-          <li>Self learn Synfig Studio using Spoken Tutorials. These are available in English, Hindi, Kannada, Marathi, Malayalam, Tamil and Telugu.</li>
-          <li>For making the animation, if you want to create graphics, record audio, etc., you can use some other software. But as there is a requirement to strictly use Open Source Software in this hackathon, you can use GIMP, Audacity, Inkscape, Openshot video editor etc. for the same. You can self learn these software using the Spoken Tutorials which are freely available. These are available in English, Hindi, Kannada, Marathi, Malayalam, Tamil and Telugu.</li>
-          <li>For help in installing Synfig Studio, please click here.</li>
-          <li>Refer graphics from our FOCAL (free and open source creative art library) repository.</li>
+        <div class="text-justify"><ul class="list-disc">
+          <li class="mb-2">Self learn Synfig Studio using Spoken Tutorials. These are available in English, Hindi, Kannada, Marathi, Malayalam, Tamil and Telugu.</li>
+          <li class="mb-2">For making the animation, if you want to create graphics, record audio, etc., you can use some other software. But as there is a requirement to strictly use Open Source Software in this hackathon, you can use GIMP, Audacity, Inkscape, Openshot video editor etc. for the same. You can self learn these software using the Spoken Tutorials which are freely available. These are available in English, Hindi, Kannada, Marathi, Malayalam, Tamil and Telugu.</li>
+          <li class="mb-2">For help in installing Synfig Studio, please click here.</li>
+          <li class="mb-2">Refer graphics from our FOCAL (free and open source creative art library) repository.</li>
           </ul></div>
       </div>
       <div class="py-3 px-3 w-full sm:w-1/2 flex items-center justify-center">
@@ -162,7 +163,7 @@ import FOSSEE from '../images/FOSSEE.png'
 
           <!-- Content for the second column (.col-6) -->
           <!-- <img src="../images/resources.png" alt="img"> -->
-          <img src={resources.src} alt="resources" decoding="async" />
+          <img src={resources.src} alt="resources" decoding="async" style="height:340px"/>
        
       </div>
     </div>
@@ -178,7 +179,7 @@ import FOSSEE from '../images/FOSSEE.png'
 
         <!-- Content for the second column (.col-6) -->
         <!-- <img src="../images/poster.png" alt="poster"> -->
-        <img src={poster.src} alt="poster" decoding="async" />
+        <img src={poster.src} alt="poster" decoding="async" style="height:200px" />
      
     </div>
       <div class="py-3 w-full sm:w-1/2">
@@ -334,28 +335,31 @@ import FOSSEE from '../images/FOSSEE.png'
   </div>
 </section>
 <!---------------------- -->
-<section id="rules" class="py-3 container">
-<div class="container pt-3" style="background-color: #bbab8b;">
-  <div class="flex items-center justify-center" style="background-color: #ffffff;">
+<section id="rules" class="py-3">
+<div class="container mx-auto px-5 pt-3">
+  
+    
+    <div class="flex items-center justify-center" style="background-color: #ffffff;">
+      
+      <h1 class="section-title">Rules and Regulations</h1>
+    </div>
+    <div class="rte-justify px-5 mx-5" >
+      
+      <ul class="px-5 mx-5 text-justify list-disc leading-relaxed" style="background-color: #bbab8b;">
+        <li class="mb-2">The decision of the review committee and organizers in declaring the results will be final. No queries in this regard will be entertained.</li>
+        <li class="mb-2">The same person can not participate in more than one team.</li>
+        <li class="mb-2">If a person is found participating in more than one team, both teams will be disqualified from the Hackathon.</li>
+        <li class="mb-2">Use ONLY Synfig Studio for creating animations. Create the supporting graphics, audio, etc. using only open source software. You are not allowed to use any proprietary software in your animation in any aspect. If found, you or your team will be disqualified.</li>
+        <li class="mb-2">The accepted submissions shall be released and published under open source license in the public domain. The copyright should be transferred to the FOSSEE project.</li>
+        <li class="mb-2">The team lead will be only one point of contact with the organizers.</li>
+        <li class="mb-2">Any participant found to be indulging in any form of malpractice will be immediately disqualified.</li>
+      </ul>
+    </div>
 
-    <h1 class="section-title">Rules and Regulations</h1>
-  </div>
-  <div class="container">
-
-    <ul style="list-style:circle;">
-      <li>The decision of the review committee and organizers in declaring the results will be final. No queries in this regard will be entertained.</li>
-      <li>The same person can not participate in more than one team.</li>
-      <li>If a person is found participating in more than one team, both teams will be disqualified from the Hackathon.</li>
-      <li>Use ONLY Synfig Studio for creating animations. Create the supporting graphics, audio, etc. using only open source software. You are not allowed to use any proprietary software in your animation in any aspect. If found, you or your team will be disqualified.</li>
-      <li>The accepted submissions shall be released and published under open source license in the public domain. The copyright should be transferred to the FOSSEE project.</li>
-      <li>The team lead will be only one point of contact with the organizers.</li>
-      <li>Any participant found to be indulging in any form of malpractice will be immediately disqualified.</li>
-    </ul>
-  </div>
-  </div>
+</div>
 </section>
 <!------- -->
-<section id="contact-us">
+<section id="contact-us" class="py-3">
   <div class="container py-3">
     <div class="flex items-center justify-center">
   
