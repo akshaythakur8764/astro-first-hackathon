@@ -1,16 +1,16 @@
 ---
 import { ViewTransitions } from 'astro:transitions'
 
-const { title, description, url, image, author } = Astro.props
+const { title, description, url, image, author ,keywords} = Astro.props
 
-let subtitle = 'Hackathon';
+let subtitle = 'Mapathon';
 ---
 
 <!-- general meta -->
 <meta name="title" content={`${title} - ${subtitle}`} />
 <meta name="description" content={description} />
 <meta name="author" content={author} />
-
+<meta name="keywords" content={keywords} />
 <!-- open graph -->
 <meta property="og:title" content={`${title} - ${subtitle}`} />
 <meta property="og:description" content={description} />

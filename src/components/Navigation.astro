@@ -5,8 +5,9 @@ import { Image } from 'astro:assets'
 
 ---
 <!-- https://cfd.fossee.in/sites/default/files/logo_for_web_3.png -->
-<div id="main-navigation" class="is-desktop py-8">
-  <div class="container">
+<div id="main-navigation" class=" text-2xl is-desktop py-8 border-b-2 md:mx-3 flex justify-center items-center dark:border-white dark:shadow-white shadow dark:shadow-md bg-transparent">
+  <div class="w-auto">
+
     <a href="/" class="flex items-center gap-2 !no-underline">
       <!-- <Image src="https://cfd.fossee.in/sites/default/files/logo_for_web_3.png" alt="Your Logo" width="100" height="100" /> -->
       <span class="font-bold"></span>
@@ -25,10 +26,12 @@ import { Image } from 'astro:assets'
         <slot />
       </ul>
     </nav>
+
   </div>
 </div>
 
 <script>
+  
    document.addEventListener('astro:page-load', () => {
     // variables
     const mainNav = document.querySelector('#main-navigation')
@@ -36,6 +39,21 @@ import { Image } from 'astro:assets'
     const dropdownMenus = [...document.querySelectorAll('.has-dropdown button')]
 
     // functions
+    // JavaScript
+// JavaScript
+
+    // Get all the menu items
+    const menuItems = document.querySelectorAll('.mobile-menu .menu-item');
+
+    // Add click event listener to each menu item
+    menuItems.forEach(function(menuItem) {
+        menuItem.addEventListener('click', function() {
+            // Remove the 'show' class from the nav element
+            document.querySelector('.mobile-menu').classList.remove('show');
+        })
+    })
+
+
     const setActiveMenuItem = () => {
       const mobileDesktopMenus = mainNav.querySelectorAll('nav > ul')
       const currenPathname = window.location.pathname + window.location.hash
@@ -88,6 +106,7 @@ import { Image } from 'astro:assets'
         mainNav.classList.remove('is-mobile')
       }
     }
+   
 
     const isOutOfViewport = (element) => {
       const elementBounds = element.getBoundingClientRect()
@@ -224,7 +243,9 @@ import { Image } from 'astro:assets'
         closeAllDropdownMenus()
       }
     })
+    
   })
+
 
 
 
@@ -240,16 +261,20 @@ import { Image } from 'astro:assets'
 
   #main-navigation {
     > .container {
-      display: flex;
-      justify-content: space-between;
+      // display: flex;
+      // justify-content: space-between;
       flex-wrap: wrap;
+      display: flex;
+  justify-content: center;
       // position: sticky;
+      background-color: transparent;
     }
 
     &.is-desktop {
       .desktop-menu {
         visibility: visible;
         position: static;
+        
       }
 
       .mobile-menu {
@@ -258,8 +283,10 @@ import { Image } from 'astro:assets'
 
       .darkmode-toggle {
         margin-top: -6px;
+        box-shadow: white;
       }
     }
+    
 
     &.is-mobile {
       flex-direction: column;
@@ -283,6 +310,9 @@ import { Image } from 'astro:assets'
         display: block;
       }
     }
+    .dark .shadow-sm{
+      box-shadow: white;
+    }
 
     .wrapper {
       display: flex;
@@ -299,7 +329,7 @@ import { Image } from 'astro:assets'
         a,
         button {
           text-decoration: none;
-          font-size: 1.125rem;
+          font-size: 1.25rem;
           line-height: 1.6875rem;
         }
 
@@ -310,8 +340,9 @@ import { Image } from 'astro:assets'
         .has-dropdown > button:focus {
           text-decoration: underline;
           text-decoration-thickness: 1px;
-          text-decoration-style: wavy;
+          text-decoration-style:solid;
           text-underline-offset: 7px;
+          transform: scale(2);
         }
 
         .is-active {
